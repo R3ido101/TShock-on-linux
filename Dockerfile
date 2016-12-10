@@ -17,9 +17,9 @@ RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E03280
 ENV TSHOCK_VERSION=4.3.17 \
     TSHOCK_FILE_POSTFIX=""
 
-ADD https://github.com/NyxStudios/TShock/releases/download/v$TSHOCK_VERSION/tshock_release.zip /
-RUN unzip tshock_release.zip -d /tshock && \
-    rm tshock_release.zip && \
+ADD https://github.com/NyxStudios/TShock/releases/download/mintaka-pre1-4.3.21-1.26-2.0.0.9/tshock_mintaka_prere_1.zip /
+RUN unzip tshock_mintaka_prere_1.zip -d /tshock && \
+    rm tshock_mintaka_prere_1.zip && \
     chmod 777 /tshock/TerrariaServer.exe
 
 # Allow for external data
