@@ -13,9 +13,9 @@ RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E03280
     apt-get clean && \
     favorites_path="/root/My Games/Terraria" && mkdir -p "$favorites_path" && echo "{}" > "$favorites_path/favorites.json"
 
-# Download and install TShock
-ENV TSHOCK_VERSION=4.3.17 \
-    TSHOCK_FILE_POSTFIX=""
+# EXPOSED PORTS
+
+EXPOSE 7777
 
 ADD https://github.com/NyxStudios/TShock/releases/download/mintaka-pre1-4.3.21-1.26-2.0.0.9/tshock_mintaka_prere_1.zip /
 RUN unzip tshock_mintaka_prere_1.zip -d /tshock && \
